@@ -24,7 +24,7 @@ fn test_account() {
 
     let opt = Opt::from_args();
 
-    let mut rt = Runtime::new()?;
+    let rt = Runtime::new()?;
 
     let client = KrakenRest::with_credential(None, &opt.kraken_api_key, &opt.kraken_api_secret);
 
@@ -39,7 +39,7 @@ fn test_open_positions() {
 
     let opt = Opt::from_args();
 
-    let mut rt = Runtime::new()?;
+    let rt = Runtime::new()?;
 
     let client = KrakenRest::with_credential(None, &opt.kraken_api_key, &opt.kraken_api_secret);
 
@@ -54,7 +54,7 @@ fn test_buy_and_cancel() {
 
     let opt = Opt::from_args();
 
-    let mut rt = Runtime::new()?;
+    let rt = Runtime::new()?;
 
     let client = KrakenRest::with_credential(None, &opt.kraken_api_key, &opt.kraken_api_secret);
 

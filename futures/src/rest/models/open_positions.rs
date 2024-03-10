@@ -1,7 +1,7 @@
 use super::Request;
 use crate::common::{PositionSide, Symbol};
 use chrono::{DateTime, Utc};
-use http::Method;
+use reqwest::Method;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Debug, Clone)]

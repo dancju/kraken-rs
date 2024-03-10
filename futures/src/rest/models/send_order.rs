@@ -1,7 +1,7 @@
 use super::Request;
 use crate::common::{OrderEvent, OrderType, SendOrderStatus, Side, Symbol, TriggerSignal};
 use chrono::{DateTime, Utc};
-use http::Method;
+use reqwest::Method;
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
 

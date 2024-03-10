@@ -9,7 +9,7 @@ fn test_orderbook() {
     let _ = dotenv::dotenv();
     let _ = env_logger::try_init();
 
-    let mut rt = Runtime::new()?;
+    let rt = Runtime::new()?;
 
     let client = KrakenRest::new(None);
     rt.block_on(client.request(OrderbookRequest { symbol: "PI_XBTUSD".parse()? }))?;
@@ -21,7 +21,7 @@ fn test_tickers() {
     let _ = dotenv::dotenv();
     let _ = env_logger::try_init();
 
-    let mut rt = Runtime::new()?;
+    let rt = Runtime::new()?;
 
     let client = KrakenRest::new(None);
 

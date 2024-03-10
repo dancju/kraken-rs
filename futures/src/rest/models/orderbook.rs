@@ -1,6 +1,6 @@
 use super::Request;
 use crate::Symbol;
-use http::Method;
+use reqwest::Method;
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Debug, Clone)]

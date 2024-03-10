@@ -1,6 +1,6 @@
 use super::Request;
 use crate::common::{Currency, Either, Symbol};
-use http::Method;
+use reqwest::Method;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 

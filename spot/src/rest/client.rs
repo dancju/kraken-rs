@@ -4,7 +4,7 @@ use base64::{decode as b64decode, encode as b64encode};
 use chrono::Utc;
 use derive_builder::Builder;
 use fehler::{throw, throws};
-use http::Method;
+use reqwest::Method;
 use log::error;
 use reqwest::{Client, Response};
 use ring::digest::{digest, SHA256};

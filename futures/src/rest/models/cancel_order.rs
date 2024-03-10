@@ -1,6 +1,6 @@
 use super::Request;
 use crate::common::OrderEvent;
-use http::Method;
+use reqwest::Method;
 use serde::{Deserialize, Serialize};
 use uuid::Uuid;
 

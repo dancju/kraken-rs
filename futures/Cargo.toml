@@ -2,7 +2,7 @@
 name = "kraken-futures"
 version = "0.1.0"
 authors = ["Weiyüen Wu <doomsplayer@gmail.com>"]
-edition = "2018"
+edition = "2021"
 description = "Rust client for Kraken. Please look at tests/examples for detail usage at current stage."
 license = "MIT"
 documentation = "https://docs.rs/kraken"
@@ -14,31 +14,25 @@ categories = ["api-bindings"]
 travis-ci = { repository = "dovahcrow/kraken-rs", branch = "master" }
 
 [dependencies]
+base64 = "0.22"
+chrono = { version = "0.4", features = ["serde"] }
+failure = "0.1"
+fehler = "1"
 futures = { version = "0.3", features = ["async-await"] }
-
-tokio = { version = "0.2", features = ["time", "macros"] }
-tungstenite = "0.10"
-tokio-tungstenite = { version = "0.10", features = ["tls"]}
-http = "0.2"
-reqwest = { version = "0.10.0", features = ["json"] }
-url = "2"
-
+log = "0.4"
+reqwest = { version = "0.11", features = ["json"] }
+ring = "0.17"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1"
-serde_urlencoded = "0.6"
-
-log = "0.4"
+serde_urlencoded = "0.7"
 shrinkwraprs = "0.3"
-chrono = { version = "0.4", features = ["serde"] }
-ring = "0.16"
-base64 = "0.12"
-uuid = { version = "0.8", features = ["serde"] }
-
-fehler = "1"
-failure = "0.1"
-# anyhow = "1"
+tokio = { version = "1", features = ["full"] }
+tokio-tungstenite = { version = "0.21" }
+tungstenite = "0.21"
+url = "2"
+uuid = { version = "1.7", features = ["serde"] }
 
 [dev-dependencies]
 structopt = "0.3"
-env_logger = "0.7"
+env_logger = "0.11"
 dotenv = "0.15"

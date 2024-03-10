@@ -190,5 +190,6 @@ fn parse_message(msg: WSMessage) -> KrakenWsMessage {
         WSMessage::Binary(c) => throw!(KrakenError::UnexpectedWebsocketBinaryContent(c)),
         WSMessage::Ping(_) => KrakenWsMessage::Ping,
         WSMessage::Pong(_) => KrakenWsMessage::Pong,
+        WSMessage::Frame(_) => unreachable!("Frame message not supported"),
     }
 }

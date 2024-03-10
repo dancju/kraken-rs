@@ -14,7 +14,7 @@ pub use orderbook::{OrderbookRequest, OrderbookResponse};
 pub use send_order::{SendOrderRequest, SendOrderResponse, SendStatus};
 pub use tickers::{TickersRequest, TickersResponse};
 
-use http::Method;
+use reqwest::Method;
 use serde::de::DeserializeOwned;
 use serde::Serialize;
 

@@ -3,7 +3,7 @@ use crate::errors::KrakenError;
 use base64::{decode as b64decode, encode as b64encode};
 use chrono::{DateTime, Utc};
 use fehler::{throw, throws};
-use http::Method;
+use reqwest::Method;
 use reqwest::{Client, Response};
 use ring::digest::{digest, SHA256};
 use ring::hmac;
@@ -71,7 +71,7 @@ impl KrakenRest {
         let url = format!("{}{}", &*REST_URL, R::ENDPOINT);
         let url = Url::parse(&url)?;
 
-        let nonce = Utc::now().timestamp_nanos();
+        let nonce = Utc::now().timestamp_nanos_opt().expect("Failed to get timestamp");
 
         let mut query = vec![];
 
